@@ -192,8 +192,7 @@ obtener el input y guardarlo (en un objeto)
         console.log("clic para eliminar una tarea");
 
         let tareaId =
-          botonEliminar.parentElement.parentElement.parentElement.dataset
-            .tareaid;
+          botonEliminar.parentElement.parentElement.parentElement.dataset.tareaid;
         // console.log(tareaId);
 
         fetch(`${API_URL}/tasks/${tareaId}`, {
@@ -201,7 +200,7 @@ obtener el input y guardarlo (en un objeto)
           headers: {
             "Content-type": "application/json",
             Authorization: sessionStorage.getItem("token"),
-          },
+          }
         });
         console.log("Eliminamos la tarea wii " + tareaId);
         buscarTareas();  
@@ -268,7 +267,7 @@ obtener el input y guardarlo (en un objeto)
     botonesCambioEstado.forEach(function (element) {
       element.addEventListener("click", function () {
         // console.log("Se está haciendo un click para cambiar estado de una tarea una tarea");
-        //capturamos el padre de element y a través de dataset, el id de la tarea
+        //capturamos el padre de element y a través de dataset, el id de la tarea --> lo puse en el template data-tareaid
         let tareaId = element.parentElement.dataset.tareaid;
         let tareaCompleted = element.parentElement.dataset.completed;
         let estadoTarea = element.classList;
@@ -318,7 +317,7 @@ obtener el input y guardarlo (en un objeto)
           })
             .then((res) => res.json())
             .then(function (miTarea) {
-              console.log(miTarea);
+              // console.log(miTarea);
               buscarTareas();  
             })
             // buscarTareas();
