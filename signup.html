@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+
+  <!-- ---------------- estilos compartidos de login y signup ---------------- -->
+  <link rel="stylesheet" href="styles/ingreso.css">
+
+  <!-- ---------------------- logica aplicada en register -------------------- -->
+  <!-- <script src="scripts/utils.js" defer></script> -->
+  <script src="scripts/signup.js" defer></script>
+
+</head>
+
+<body class="dark">
+
+  <div class="left darkSoft">
+    <img src="./assets/persona-signup.png" alt="">
+  </div>
+  <div class="right">
+    <form method="post" id="formReg">
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+
+      <label>
+        Nombre:
+        <input id="inputNombre" type="text">
+        <small id="errorNombre" class="error"></small>
+      </label>
+      <label>
+        Apellido:
+        <input id="inputApellido"  type="text">
+        <small id="errorApellido" class="error"></small>
+      </label>
+      <label>
+        Email:
+        <input id="inputEmailReg" type="text">
+        <small id="errorEmailRegistro" class="error"></small>
+        <small id="errorEmailVacio" class="error"></small>
+      </label>
+      <label>
+        Contraseña:
+        <input id="crearPass" type="text">
+        <small id="errorCrearPass" class="error"></small>
+        <small id="validarPass" class="error"></small>
+      </label>
+      <label>
+        Repetir contraseña:
+        <input id="confirmarPass" type="password">
+        <small id="errorConfirmPass" class="error"></small>
+      </label>
+
+      <button type="submit" id="botonRegistrar">Crear Cuenta</button>
+
+    </form>
+    <div class="ingresarA">
+      <a href="index.html">¿Ya tiene una cuenta? Ingrese aquí</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
