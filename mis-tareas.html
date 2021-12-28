@@ -23,12 +23,13 @@
 
 
   <!-- logica de la página -->
+  <script src="scripts/utils.js" defer></script>
   <script src="./scripts/tasks.js"></script>
 
   <title>ToDo</title>
 </head>
 
-<body class="dark">
+<body>
   <header>
     <nav>
       <a href="#">Listita de Tareas</a>
@@ -37,13 +38,13 @@
     <div class="user-info">
       <p id="user-name">username</p>
       <div class="user-image"></div>
-      <p id="closeApp">Cerrar sesión</i>
-      </p>
+      <i class="fas fa-adjust" id="dark-mode-toggle"></i>
+      <p id="closeApp">Cerrar sesión</p>
     </div>
   </header>
 
 
-  <form id="formNuevaTarea" class="nueva-tarea" class="darkSoft">
+  <form id="formNuevaTarea" class="nueva-tarea">
     <div class="not-done "></div>
     <input id="nuevaTarea" type="text" placeholder="Nueva tarea">
     <button type="submit">

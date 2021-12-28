@@ -7,6 +7,9 @@
 
   --dark-grey: #3C3C3C;
   --soft-grey: #404040;
+
+  --foreground:var(--dark-grey);
+  --background: var(--app-grey);
 }
 
 * {
@@ -16,8 +19,23 @@
 }
 
 body {
-  background-color: #F6F6F6;
+  /* background-color: #F6F6F6; */
+  background-color: var(--background);
+  color: var(--foreground);
   min-height: 100vh;
+}
+
+
+.dark {
+  --primary: #7898FF;
+  --secondary: #8E64C5;
+  --app-grey: #F2F2F2;
+
+  --dark-grey: #3C3C3C;
+  --soft-grey: #404040;
+
+  --foreground:var(--app-grey);
+  --background: var(--dark-grey);
 }
 
 button {
@@ -26,17 +44,12 @@ button {
   cursor: pointer;
 }
 
-.dark {
-  background-color: var(--dark-grey);
-  color: var(--soft-grey);
-}
-
-.darkSoft {
-  background-color: var(--soft-grey);
-}
-
-
 a {
-  color: var(--app-grey);
+  color: var(--foreground);
 }
 
+#dark-mode-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+  padding-left: 1rem;
+}
